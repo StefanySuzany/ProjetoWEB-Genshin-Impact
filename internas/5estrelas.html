@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Genshin Impact</title>
+    <link rel="stylesheet" type="text/css" href="../css/icons/style.css">
+
+    <script src="../plugins/jquery.min.js"></script>
+    <script src="../plugins/jquery.magnific-popup.js"></script>
+    <link rel="stylesheet" href="../plugins/magnific-popup.css">
+
+    <script>
+        $(document).ready(function() {
+	$('#galeria-fotos').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+	});
+});
+    </script>
+
+</head>
+<body id="bodyperso">
+    <header id="cabecalho">
+        <div class="container">
+            <a href="https://genshin.hoyoverse.com/pt/home" target="_blank"><img src="../imagens/genshinlogo.png" id="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../internas/historia.html">História</a></li>
+                    <li><a href="../internas/info.html">Informação</a></li>
+                    <li><a href="#">Personagens</a>
+                        <ul>
+                            <li><a href="#">&#11088 5 stars</a></li>
+					        <li><a href="../internas/4estrelas.html">&#11088 4 stars</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../internas/mundo.html">Mundo</a></li>
+                    <li><a href="https://genshin.hoyoverse.com/pt/home" target="_blank" class="but-baixar">BAIXAR</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="conteudo">
+        <div class="container">
+        <h6>Conheça alguns dos personagens 5 &#11088</h6>
+        <div id="galeria-fotos">
+            <a href="../imagens/fotosg/raiden.jpg" title="Raiden Shogun"><img src="../imagens/fotosp/raidenP.jpg" alt=""><p>Raiden Shogun</p></a>
+            <a href="../imagens/fotosg/zhongliG.jpg" title="Zhongli"><img src="../imagens/fotosp/zhongliP.jpg" alt=""><p>Zhongli</p></a>
+            <a href="../imagens/fotosg/venti.jpg" title="Venti"><img src="../imagens/fotosp/ventiP.jpg" alt=""><p>Venti</p></a>
+            <a href="../imagens/fotosg/xiaog.jpg" title="Xiao"><img src="../imagens/fotosp/xiaop.jpg" alt=""><p>Xiao</p></a>
+            <a href="../imagens/fotosg/ganyug.jpg" title="Ganyu"><img src="../imagens/fotosp/ganyup.jpg" alt=""><p>Ganyu</p></a>
+            <a href="../imagens/fotosg/jean.jpg" title="Jean"><img src="../imagens/fotosp/jeanp.jpg" alt=""><p>Jean</p></a>
+            <a href="../imagens/fotosg/diluc.jpg" title="Diluc"><img src="../imagens/fotosp/dilucp.jpg" alt=""><p>Diluc</p></a>
+            <a href="../imagens/fotosg/kokomi.jpg" title="Kokomi"><img src="../imagens/fotosp/kokomip.jpg" alt=""><p>Kokomi</p></a>
+        </div>
+        <button><a href="https://wiki.hoyolab.com/pc/genshin/aggregate/character?mhy_presentation_style=fullscreen&utm_source=officialweb&utm_medium=banner" target="_blank">Outros 5 &#11088</a></button>
+    </section>
+    </main>
+</body>
+</html>
